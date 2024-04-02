@@ -1,0 +1,212 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers children vertically in the container */
+  align-items: center;
+  position: relative;
+  background-image: url('./nw7-scaled-e1694912890695.jpg');
+  background-size: cover; /* Cover the entire area without stretching */
+  background-position: center; /* Center the background image */
+  min-height: 100vh; /* Ensure it covers at least the full height of the viewport */
+  width: 100%; /* Ensure it covers the full width */
+  opacity: .3;
+}
+
+@font-face {
+  font-family: 'Lobster Two';
+  src: url('/Users/bardia/Downloads/Lobster_Two/LobsterTwo-BoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.homepage-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Ensures the text is on top if overlapping with other content */
+  z-index: 2; 
+  font-size: 160px;
+  font-family: 'Lobster Two', sans-serif;
+  color: white;
+  -webkit-text-stroke: 3px black;
+}
+
+
+
+#fav-vids{
+  min-height: 100vh;
+  background: linear-gradient(90deg, #4169e1, #FFD700);
+  background-size: 300%;
+  animation: bg-animation 60s infinite;
+}
+
+#fav-vids h1 {
+  text-align: center;
+  font-family: 'Lobster Two';
+  color: white;
+  font-size: 70px;
+  -webkit-text-stroke: 1px black;
+}
+
+
+#members {
+  min-height: 100vh;
+  background: linear-gradient(90deg, #4169e1, #FFD700);
+  background-size: 300%;
+  animation: bg-animation 60s infinite;
+}
+
+#members h1 {
+  text-align: center;
+  font-family: 'Lobster Two';
+  color: white;
+  font-size: 70px;
+  -webkit-text-stroke: 1px black;
+}
+
+
+#about {
+  font-family: 'Basic Sans', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  gap: 10px;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: white;
+  background: linear-gradient(90deg, #4169e1, #FFD700);
+  background-size: 300%;
+  animation: bg-animation 60s infinite;
+}
+
+
+#about h1 {
+  font-family: 'Lobster Two';
+  font-size: 70px;
+  -webkit-text-stroke: 1px black;
+}
+
+#about-description {
+  width: 60%;
+  margin: 10px;
+  padding: 20px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  grid-column: 1 / 2; grid-row: 1 / 2;
+  -webkit-text-stroke: .1px black;
+}
+
+#hire-us {
+  margin: 10px;
+  padding: 20px;
+  grid-column: 2 / 3; grid-row: 1 / 2;
+  transform: rotate(-5deg) translateX(-70px);
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+  animation: bob1 7s ease-in-out infinite;
+}
+
+#hire-us:hover {
+  box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bob1 {
+  0%, 100% {
+    transform: translate(-70px, 0) rotate(-5deg);
+  }
+  50% {
+    transform: translate(-70px, -10px) rotate(-5deg); /* Adjust the value to control the bobbing distance */
+  }
+}
+
+
+
+
+#follow-us {
+  margin: 10px;
+  padding: 20px;
+  grid-column: 1 / 2; grid-row: 2 / 3;
+  transform: rotate(5deg) translateX(40px) translateY(-30px);
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+  animation: bob2 6s ease-in-out infinite;
+
+}
+
+#follow-us:hover {
+  box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bob2 {
+  0%, 100% {
+    transform: translate(40px, -30px) rotate(5deg);
+  }
+  50% {
+    transform: translate(40px, -40px) rotate(5deg); /* Adjust the value to control the bobbing distance */
+  }
+}
+
+
+
+
+#events img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-column: 2 / 3; grid-row: 2 / 3;
+}
+
+#events .carousel-item {
+  height: 100px;
+}
+
+.member-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+
+#eddie-card {
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+#eddie-card:hover {
+  box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#ellington-card {
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+#ellington-card:hover {
+  box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#athena-card {
+  transition: box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+#athena-card:hover {
+  box-shadow: 0 10px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    30% {background-position: right}
+    90% {background-position: left}
+  }
+
+
+
+
+

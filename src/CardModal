@@ -1,0 +1,46 @@
+import React, { useState } from 'react';
+import { Card, Button, Modal } from 'react-bootstrap';
+
+function CardWithModal() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
+  return (
+    <>
+      <Card style={{ width: '18rem' }} onClick={handleShow}>
+        <Card.Img variant="top" src="your-small-image-url.jpg" />
+        <Card.Body>
+          <Card.Title>Small Card Title</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title.
+          </Card.Text>
+        </Card.Body>
+      </Card>
+
+      <Modal show={showModal} onHide={handleClose} size="lg" centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Big Card Title</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {/* You can reuse the Card component with different content or styling here */}
+          <Card>
+            <Card.Img variant="top" src="your-large-image-url.jpg" />
+            <Card.Body>
+              <Card.Title>Detailed Information</Card.Title>
+              <Card.Text>
+                This is a wider card with supporting text below as a natural lead-in to additional content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
+
+export default CardWithModal
